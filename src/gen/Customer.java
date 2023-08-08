@@ -1,5 +1,8 @@
 package gen;
 
+import java.nio.charset.Charset;
+import java.util.Random;
+
 public class Customer {
 
     private String lastname;
@@ -24,7 +27,27 @@ public class Customer {
 
     public void setCustomerDetails(){
 
-        setFirstname("Padro");
-        setLastname("Ponny");
+        String random = getRandomString();
+
+        setFirstname("Padro"+random);
+        setLastname("Ponny"+random);
+
+    /*    setFirstname("Padro");
+        setLastname("Ponny");*/
+    }
+
+    public String getRandomString(){
+
+        int leftLimit = 97; // letter 'a'
+        int rightLimit = 122; // letter 'z'
+        int targetStringLength = 5;
+        Random random = new Random();
+
+        String generatedString = random.ints(leftLimit, rightLimit + 1)
+                .limit(targetStringLength)
+                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                .toString();
+
+        return generatedString;
     }
 }

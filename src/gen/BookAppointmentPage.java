@@ -6,6 +6,8 @@ public class BookAppointmentPage {
 
     public void getCustomerDetailsInBookAppointmentPage(){
 
-        System.out.println(customerRegistration.customerDetails.get("customerDetails").getLastname());
+        //how would we access the hashmap here in this class ?
+
+        System.out.println("in BookAppointment Page : "+customerRegistration.customerDetails.get("customerDetails").getLastname());
     }
 }

@@ -8,7 +8,9 @@ public class Main {
         BookAppointmentPage bookAppointmentPage = new BookAppointmentPage();
 
         customerRegistration.getCustomerDetailsInCustomerRegistration();
+        customerRegistration.getCustomerDetailsInCustomerRegistration();
 
+        bookAppointmentPage.getCustomerDetailsInBookAppointmentPage();
         bookAppointmentPage.getCustomerDetailsInBookAppointmentPage();
 
     }
